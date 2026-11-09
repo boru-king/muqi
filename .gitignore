@@ -1,0 +1,74 @@
+# 目憩（Mù Qī）— 仓库忽略规则
+# 原则：仓库只放源码、配置模板与打包配置；
+#       exe 产物上传 Release，运行时数据与用户隐私文件一律不入库。
+
+# ── Python 虚拟环境（项目要求不使用全局环境）──
+.venv/
+venv/
+env/
+ENV/
+
+# ── Python 缓存 / 构建中间产物 ──
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# ── PyInstaller：exe 上传 Release，不进仓库 ──
+build/
+dist/
+*.spec.bak
+# 注意：muqi.spec 是源码配置，必须提交，不要写成 *.spec
+
+# ── 运行时生成的数据（不入库）──
+data/*.db
+data/*.db-journal
+data/*.db-wal
+data/*.db-shm
+data/*.log*
+*.tmp
+config/*.tmp
+*.bak
+*.orig
+*.rej
+
+# ── 用户配置与自定义图片（含本地绝对路径 / 个人隐私）──
+# 提交 config/settings.example.json 模板，实际文件由程序首次运行生成
+config/settings.json
+assets/reminders/*
+!assets/reminders/.gitkeep
+assets/*.png
+assets/*.jpg
+assets/*.jpeg
+assets/*.gif
+assets/*.webp
+assets/*.bmp
+
+# ── 本地环境 / 密钥 ──
+.env
+.env.*
+!.env.example
+
+# ── 工具私有数据（助手工作日志等，不是项目源码，不入库）──
+# 注意：该目录由工具维护，保留在本地即可，不要删除
+.workbuddy/
+
+# ── 需求规格文档（本地留存，不入库）──
+# 用通配匹配，避免中文全角冒号 / 空格在不同文件系统上的差异
+*需求文档*.md
+
+# ── 操作系统与编辑器 ──
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+*~

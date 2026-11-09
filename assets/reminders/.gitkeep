@@ -1,0 +1,1 @@
+# 保留该目录；程序首次运行也会通过 ensure_directories() 自动创建。

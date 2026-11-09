@@ -1,0 +1,21 @@
+# 仓库内统一 LF，工作区由 Git 按平台自动处理
+* text=auto
+
+# Windows 脚本保持 CRLF，避免双击运行时解析异常
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# 二进制资源：禁止换行转换、禁止文本 diff
+*.ico binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.bmp binary
+*.db binary
+*.exe binary
+*.dll binary
+*.pyd binary
+*.pyc binary

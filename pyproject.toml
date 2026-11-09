@@ -1,0 +1,28 @@
+# 目憩（Mù Qī）项目元数据与开发工具配置。
+# 注意：本项目是 Windows 桌面应用，不通过 pip 安装或发布；
+#       运行依赖以 requirements.txt 为准，打包配置见 muqi.spec。
+
+[project]
+name = "muqi"
+version = "1.0.0"
+description = "目憩 Mù Qī — Windows 智能用眼提醒工具"
+requires-python = ">=3.8"
+
+[tool.ruff]
+line-length = 100
+target-version = "py38"
+exclude = [
+    ".venv",
+    "build",
+    "dist",
+    ".workbuddy",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+# 代码内已有中文注释与较长签名，行长度交由人工把控
+ignore = ["E501"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"

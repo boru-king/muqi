@@ -1,0 +1,12 @@
+# 目憩（Mù Qī）运行依赖
+# 其余模块全部使用 Python 标准库，无需安装：
+#   tkinter / ctypes / winsound / sqlite3 / json / threading / logging
+# Python 3.8+，目标平台 Windows 10 / 11
+
+# OpenCV 5.x 已移除 Haar Cascade 数据与 cv2.CascadeClassifier，
+# 而本项目按需求文档使用 Haar Cascade 做人脸检测，故必须限定 4.x。
+opencv-python>=4.8.0,<5.0.0
+pystray>=0.19.0
+Pillow>=10.0.0
+
+# 打包阶段（P3）另行安装：pip install pyinstaller

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "reminder_interval_minutes": 60,
+  "rest_duration_minutes": 15,
+  "idle_threshold_seconds": 60,
+  "camera_check_interval_seconds": 60,
+  "camera_enabled": true,
+  "reminder_text": "该休息了，活动一下，放松眼睛吧！",
+  "reminder_image": "",
+  "animation_enabled": true,
+  "animation_type": "fade",
+  "reminder_methods": [
+    "popup"
+  ],
+  "auto_cleanup_enabled": false,
+  "auto_cleanup_keep_days": 90
+}
